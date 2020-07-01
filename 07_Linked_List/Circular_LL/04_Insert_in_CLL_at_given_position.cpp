@@ -77,7 +77,7 @@ struct node *insert(struct node *p, int position, int x)
 {
     struct node *head = p;
 
-    if (position = 1)
+    if (position == 1)
     {
         if (p == NULL)
         {
@@ -103,7 +103,8 @@ struct node *insert(struct node *p, int position, int x)
         }
     }
     else
-    {
+    {   
+        p=head;
         struct node *t = new (struct node);
         t->data = x;
         for (int i = 1; i < position - 1; i++)
@@ -112,7 +113,6 @@ struct node *insert(struct node *p, int position, int x)
         }
         t->next = p->next;
         p->next = t;
-        p = t;
         return head;
     }
 }
@@ -132,11 +132,11 @@ int main()
     cout << "Modi CLL: ";
     r_display(first, first);
     cout << "\n";
-    first = insert(first, 6, 5);
+    first = insert(first,7, 5);
     cout << "Modi CLL: ";
     r_display(first, first);
     cout << "\n";
-    first = insert(first, 3, 7);
+    first = insert(first,3, 7);
     cout << "Modi CLL: ";
     r_display(first, first);
     cout << "\n";
