@@ -1,0 +1,16 @@
+Enter Stack Size: 
+Stack Element is:
+1 
+Stack is not Full
+Stack Element is:
+1 2 
+Stack is not Full
+Stack Element is:
+1 2 3 
+Stack is not Full
+Stack Element is:
+1 2 3 4 
+Stack is not Full
+Stack Element is:
+1 2 3 4 5 
+Stack is Full
