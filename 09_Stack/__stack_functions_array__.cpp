@@ -68,18 +68,17 @@ string pop(struct stack *s)
     }
 }
 // function for popping element from stack
-string pop_c(struct stack *s)
+char pop_c(struct stack *s)
 {
     if (s->top == -1)
     {
-        return "Stack Underflow";
+        return '!';
     }
     else
     {
         char x = s->stk1[s->top];
         s->top--;
-        string ret = "Element " + to_string(x) + " Popped";
-        return ret;
+        return x;
     }
 }
 //function for peeking element from stack
@@ -108,6 +107,20 @@ string top(struct stack s)
     {
         int temp = s.stk[s.top];
         return "Stack Top Element is : " + to_string(temp);
+    }
+}
+
+//function for getting top element
+char top_c(struct stack s)
+{
+    if (s.top == -1)
+    {
+        return '!';
+    }
+    else
+    {
+        char temp = s.stk1[s.top];
+        return temp;
     }
 }
 //function for check is stack is empty or not
